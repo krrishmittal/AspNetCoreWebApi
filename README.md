@@ -18,6 +18,7 @@ After building a strong foundation in **C# and Object-Oriented Programming**, th
 Each folder in this repository represents a **progressive step** in my .NET learning journey.
 
 ---
+
 ## 📅 My Daily Learning Progress
 
 Each day represents a focused learning milestone with hands-on implementation.
@@ -48,49 +49,27 @@ Refactored the application using the **Repository Pattern** to separate data acc
 
 ---
 
-### **RepositoryServices**
-This project focuses on improving code quality and architecture by implementing the **Repository Pattern**.
+### **Day 4: Unit of Work Pattern & Transaction Handling**
 
-Key goals:
-- Separating business logic from data access logic
-- Making the codebase cleaner and easier to maintain
-- Improving testability and scalability
-- Following industry-standard backend design practices
+Implemented **server-side pagination** to efficiently handle large datasets and learned how real-world APIs manage large amounts of data without performance issues.
 
-This layer represents how enterprise-level applications are typically structured.
+👉 [View Day 4 Project →](UnitOfWork)
+
+This step helped me understand how larger applications handle database transactions, reduce tight coupling between repositories, and maintain a clean and scalable data access layer. The focus here was on structuring the code the way it is done in **real-world enterprise .NET applications**.
+
 
 ---
 
-## 🚀 Learning Approach
+### **Day 5: Pagination, Sorting & Filtering in Web API**
 
-- **Hands-on development** – learning by building real projects
-- **Incremental complexity** – starting simple and improving structure over time
-- **Best practices focused** – clean code, separation of concerns, reusability
-- **Real-world mindset** – writing code as it would be written in production
+Implemented the **Unit of Work pattern** to manage multiple repositories through a single database context and ensure data consistency across operations.
 
----
+👉 [View Day 5 Project →](pagination)
 
-## 🔥 Current Focus
-
-- ASP.NET Core Web API
-- Entity Framework Core
-- Repository Pattern
-- Clean architecture fundamentals
-- Building scalable backend systems
+This step focused on improving API performance by introducing pagination, dynamic sorting, and filtering using query parameters. It helped me understand why production APIs never return all records at once and how scalable backend systems are designed.
 
 ---
 
-## 🎯 Long-Term Goal
+## 🧩 Repository Structure
 
-To become a **professional .NET backend developer** capable of:
-- Designing and building production-ready APIs
-- Working with databases efficiently
-- Writing clean, maintainable, and scalable code
-- Contributing to real-world enterprise .NET applications
 
----
-
-**Started: January 2026**  
-**Current Phase: ASP.NET Core Web API & Backend Development**
-
-🚀 *Consistently learning, building, and pushing code forward.*
