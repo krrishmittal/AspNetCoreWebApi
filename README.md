@@ -49,7 +49,7 @@ Refactored the application using the **Repository Pattern** to separate data acc
 
 ---
 
-### **Day 4: Pagination, Sorting & Filtering in Web API**
+### **Day 4: Unit of Work Pattern & Transaction Handling**
 
 Implemented **server-side pagination** to efficiently handle large datasets and learned how real-world APIs manage large amounts of data without performance issues.
 
@@ -60,7 +60,7 @@ This step helped me understand how larger applications handle database transacti
 
 ---
 
-### **Day 5: Unit of Work Pattern & Transaction Handling**
+### **Day 5: Pagination, Sorting & Filtering in Web API**
 
 Implemented the **Unit of Work pattern** to manage multiple repositories through a single database context and ensure data consistency across operations.
 
@@ -71,4 +71,5 @@ This step focused on improving API performance by introducing pagination, dynami
 ---
 
 ## 🧩 Repository Structure
+
 
