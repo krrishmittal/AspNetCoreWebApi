@@ -76,11 +76,12 @@ This step focused on improving API performance by introducing pagination, dynami
 
 Implemented the **Unit of Work pattern** to manage multiple repositories through a single database context and ensure data consistency across operations.
 
-👉 [View Day 5 Project →](pagination)
+👉 [View Day 6 Project →](pagination)
 
 This step focused on improving API performance by introducing pagination, dynamic sorting, and filtering using query parameters. It helped me understand why production APIs never return all records at once and how scalable backend systems are designed.
 
 ---
 ## 🧩 Repository Structure
+
 
 
