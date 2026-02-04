@@ -1,0 +1,29 @@
+{
+  "serilog": {
+    "using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File","Serilog.Enrichers.Environment" ],
+    "minimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "writeTo": [
+      {
+        "name": "Console",
+        "args": {
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {Level:u3}] {SourceContext} - {Message:lj}{NewLine}{Exception}"
+        }
+      },
+      {
+        "name": "File",
+          "args": {
+          "path": "logs/log-.txt",
+          "rollingInterval": "Day",
+          "outputTemplate": "[{Timestamp:yyyy-MM-dd HH:mm:ss} {Level:u3}] {SourceContext} - {Message:lj}{NewLine}{Exception}"
+        }
+      }
+    ],
+    "enrich": [ "FromLogContext", "WithMachineName", "WithThreadId" ]
+  }
+}

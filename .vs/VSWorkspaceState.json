@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LoggingWithSerilog",
+    "\\RepositoryServices\\EmployeeCRUD"
   ],
+  "SelectedNode": "\\LoggingWithSerilog\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
