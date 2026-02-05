@@ -72,13 +72,14 @@ This step focused on improving API performance by introducing pagination, dynami
 
 ---
 
-### **Day 6: Pagination, Sorting & Filtering in Web API**
+### **Day 6: Logging with Serilog (Production-Ready APIs)**
 
-Implemented the **Unit of Work pattern** to manage multiple repositories through a single database context and ensure data consistency across operations.
+Implemented **structured logging** using **Serilog** to make the Web API production-ready and easier to debug, monitor, and maintain.
 
-👉 [View Day 5 Project →](pagination)
+👉 [View Day 6 Project →](LoggingWithSerilog)
 
-This step focused on improving API performance by introducing pagination, dynamic sorting, and filtering using query parameters. It helped me understand why production APIs never return all records at once and how scalable backend systems are designed.
+This step focused on understanding **why logging is critical in real-world applications** and how professional .NET applications track requests, errors, and application lifecycle events.
+
 
 ---
 ## 🧩 Repository Structure

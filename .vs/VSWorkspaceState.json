@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\LoggingWithSerilog",
-    "\\RepositoryServices\\EmployeeCRUD"
+    "\\LoggingWithSerilog\\Controllers"
   ],
-  "SelectedNode": "\\LoggingWithSerilog\\Program.cs",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
