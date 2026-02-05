@@ -87,7 +87,7 @@ Implemented **robust validation** in the Web API to ensure only **correct, meani
 
 👉 [View Day 7 Project →](ValidationForDataModels)
 
-This step focused on **data integrity and API reliability**, which are critical in real-world backend systems. Instead of trusting client input, the API now validates incoming requests at multiple levels before processing them.
+
 ---
 ## 🧩 Repository Structure
 
