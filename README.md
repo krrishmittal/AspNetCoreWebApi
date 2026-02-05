@@ -72,22 +72,12 @@ This step focused on improving API performance by introducing pagination, dynami
 
 ### **Day 6: Logging with Serilog (Production-Ready APIs)**
 
-<<<<<<< HEAD
-### **Day 6: Logging with Serilog (Production-Ready APIs)**
-
 Implemented **structured logging** using **Serilog** to make the Web API production-ready and easier to debug, monitor, and maintain.
+
 
 👉 [View Day 6 Project →](LoggingWithSerilog)
 
 This step focused on understanding **why logging is critical in real-world applications** and how professional .NET applications track requests, errors, and application lifecycle events.
-=======
-Implemented **structured logging** using **Serilog** to make the Web API production-ready and easier to debug, monitor, and maintain.
-
-👉 [View Day 6 Project →](LoggingWithSerilog)
-
-This step focused on understanding **why logging is critical in real-world applications** and how professional .NET applications track requests, errors, and application lifecycle events.
-
->>>>>>> 60336287bc6c8e1245548618ba853a76cc4614bc
 
 
 ---
