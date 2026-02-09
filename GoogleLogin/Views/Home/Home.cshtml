@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: white;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .user-info {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .user-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .user-info-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #667eea;
+            min-width: 90px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            color: #333;
+            font-size: 16px;
+            word-break: break-word;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .role-admin {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        .role-user {
+            background-color: #4ecdc4;
+            color: white;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+        }
+
+        .btn-logout {
+            background-color: #ff4444;
+            color: white;
+        }
+
+        .btn-logout:hover {
+            background-color: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 68, 68, 0.4);
+        }
+
+        .btn-login {
+            background-color: #667eea;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background-color: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .welcome-text {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Dashboard</h1>
+        
+        @if (ViewData["IsAuthenticated"] as bool? == true)
+        {
+            <div class="user-info">
+                @if (!string.IsNullOrEmpty(ViewData["Id"]?.ToString()))
+                {
+                    <div class="user-info-item">
+                        <span class="info-label">User ID:</span>
+                        <span class="info-value">@ViewData["Id"]</span>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(ViewData["UserName"]?.ToString()))
+                {
+                    <div class="user-info-item">
+                        <span class="info-label">Username:</span>
+                        <span class="info-value">@ViewData["UserName"]</span>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(ViewData["Email"]?.ToString()))
+                {
+                    <div class="user-info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value">@ViewData["Email"]</span>
+                    </div>
+                }
+                @if (!string.IsNullOrEmpty(ViewData["Role"]?.ToString()))
+                {
+                    <div class="user-info-item">
+                        <span class="info-label">Role:</span>
+                        <span class="info-value">@ViewData["Role"]</span>
+                    </div>
+                }
+            </div>
+            <div>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a href="/admin" class="btn btn-login">
+                        Admin Dashboard
+                    </a>
+                }
+            </div>
+            <a href="/logout" class="btn btn-logout">Logout</a>
+        }
+        else
+        {
+            <p class="welcome-text">Please login to access your account</p>
+            <a href="/login" class="btn btn-login">Go to Login</a>
+        }
+    </div>
+</body>
+</html>

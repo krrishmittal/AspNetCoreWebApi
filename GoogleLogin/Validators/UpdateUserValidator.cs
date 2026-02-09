@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using ValidationForDataModels.DTO;
+using GoogleLogin.DTO;
 
-namespace ValidationForDataModels.Validators
+namespace GoogleLogin.Validators
 {
     public class UpdateUserValidator : AbstractValidator<UpdateUser>
     {
@@ -22,8 +22,8 @@ namespace ValidationForDataModels.Validators
                 .MinimumLength(6)
                 .WithMessage("Password must be at least 6 characters long.")
                 .WithErrorCode("minimum length")
-                .MaximumLength(15)
-                .WithMessage("Password cannot exceed 50 characters.")
+                .MaximumLength(255)
+                .WithMessage("Password cannot exceed 255 characters.")
                 .WithErrorCode("maximum length")
                 .When(user => !string.IsNullOrEmpty(user.Password));
         }

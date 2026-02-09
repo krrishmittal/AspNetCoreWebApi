@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\LoggingWithSerilog",
-    "\\LoggingWithSerilog\\Controllers"
+    "\\LoggingWithSerilog\\Controllers",
+    "\\ValidationForDataModels"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\ValidationForDataModels\\readme.md",
   "PreviewInSolutionExplorer": false
 }

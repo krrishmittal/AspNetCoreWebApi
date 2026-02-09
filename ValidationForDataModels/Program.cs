@@ -39,13 +39,28 @@ builder.Services.AddControllers()
     {
         options.InvalidModelStateResponseFactory = context =>
         {
-            var messages = context.ModelState
-                .SelectMany(message => message.Value.Errors)
-                .Select(error => error.ErrorMessage)
-                .ToList();
+            var errors = context.ModelState
+                .Where(e => e.Value.Errors.Count > 0)
+                .ToDictionary(
+                    kvp => kvp.Key,
+                    kvp => kvp.Value.Errors.Select(e => new
+                    {
+                        error = e.Exception?.Data["ErrorCode"]?.ToString() ?? 
+                                context.ModelState[kvp.Key]?.ValidationState.ToString() ?? 
+                                "validation error",
+                        message = e.ErrorMessage
+                    }).ToArray()
+                );
 
-            var errorMessage = string.Join("\n", messages);
-            return new BadRequestObjectResult(errorMessage);
+            var response = new
+            {
+                type = "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+                title = "One or more validation errors occurred.",
+                status = 400,
+                errors = errors
+            };
+
+            return new BadRequestObjectResult(response);
         };
     });
 
